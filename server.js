@@ -27,7 +27,7 @@ app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
 
-function hash(input salt){
+function hash(input, salt){
     //how do we creat the hash?
     var hashed=crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return hashed.toString('hex');
